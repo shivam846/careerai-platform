@@ -1,0 +1,126 @@
+/* ============ PAGE WRAPPER ============ */
+.assessment-selector {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: "Poppins", sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Theme support */
+.assessment-selector.dark {
+  background: linear-gradient(135deg, #0b0f1a, #11162a);
+  color: #e0e6ff;
+}
+
+.assessment-selector.light {
+  background: #f5f7fb;
+  color: #222;
+}
+
+/* ============ CARD CONTAINER ============ */
+.selector-card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  padding: 35px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.assessment-selector.light .selector-card {
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ============ HEADER ============ */
+.selector-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.selector-header h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.selector-header p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* ============ OPTIONS GRID ============ */
+.selector-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* ============ OPTION CARD ============ */
+.option-card {
+  border-radius: 12px;
+  padding: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.assessment-selector.light .option-card {
+  background: #f9f9f9;
+}
+
+.option-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Icon */
+.option-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+/* Title */
+.option-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+/* Description */
+.option-card p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+/* ============ ACTION BUTTON ============ */
+.option-btn {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg, #4facfe, #8a2be2);
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.option-btn:hover {
+  opacity: 0.9;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 600px) {
+  .selector-card {
+    padding: 25px 20px;
+  }
+
+  .selector-header h2 {
+    font-size: 1.6rem;
+  }
+}

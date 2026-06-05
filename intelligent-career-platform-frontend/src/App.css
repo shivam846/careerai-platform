@@ -1,0 +1,47 @@
+/* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Make font look smooth */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fdfdfd;
+}
+
+/* Center app container if needed later */
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+.login-container button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: #0077ff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
