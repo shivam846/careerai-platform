@@ -142,7 +142,7 @@
 # db = mysql.connector.connect(
 #     host="localhost",
 #     user="careerai",
-#     password="Career@123",
+#     password=os.getenv("DB_PASSWORD", ""),
 #     database="careerdb"
 # )
 # cursor = db.cursor()
@@ -233,6 +233,7 @@
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import os
 import joblib
 import numpy as np
 import mysql.connector
@@ -245,10 +246,10 @@ CORS(app)
 # ==========================
 try:
     db = mysql.connector.connect(
-        host="localhost",
-        user="careerai",
-        password="Career@123",
-        database="careerdb"
+        host=os.getenv("DB_HOST", "localhost"),
+        user=os.getenv("DB_USERNAME", "careerai"),
+        password=os.getenv("DB_PASSWORD", ""),
+        database=os.getenv("DB_NAME", "careerdb")
     )
     cursor = db.cursor()
     print("✅ MySQL Connected")

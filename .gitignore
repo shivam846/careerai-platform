@@ -14,3 +14,16 @@
 
 # Environment files
 .env
+.env.*
+!.env.example
+
+# Firebase / Service Accounts
+serviceAccountKey.json
+firebase-adminsdk*.json
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
